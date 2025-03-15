@@ -1,14 +1,9 @@
 import {create} from 'zustand';
 
-interface Todo {
-    todo: string,
-    completed: boolean,
-    userId: number,
-}
 
 
 interface TodoStore {
-    todos: Todo[];
+    todos: string[];
     addTodo: (todo: string) => void;
     removeTodo: (index: number) => void;
     fetchTodos: () => Promise<void>;
